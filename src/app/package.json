@@ -1,0 +1,19 @@
+{
+  "name": "skripsi-software",
+  "version": "0.1.0",
+  "author": "Muhammad Ghazali <muhammad.ghazali@widyatama.ac.id>",
+  "description": "A Web API",
+  "private": true,
+  "scripts": {
+    "start": "node app"
+  },
+  "main": "./lib/skripsi-software",
+  "dependencies": {
+    "express": "3.1.x",
+    "jade": "*"
+  },
+  "license": "private",
+  "engines": {
+    "node": "0.8.x"
+  }
+}
