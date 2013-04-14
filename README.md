@@ -1,4 +1,4 @@
-skripsi-software
-================
+POC: JSON is more efficient than XML in Web API resource representation
+=======================================================================
 
-Repository untuk mengelola source perangkat lunak untuk skripsi
+TBD
