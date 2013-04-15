@@ -19,17 +19,17 @@ app.use(app.router);
 
 // development only
 if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+  app.use(express.errorHandler({dumpExceptions: true, showStack: true}));
 }
 
-// development only
+// production only
 if ('production' == app.get('env')) {
-  app.use(express.errorHandler());
+  app.use(express.errorHandler({dumpExceptions: true}));
 }
 
 // testing only
 if ('testing' == app.get('env')) {
-  app.use(express.errorHandler());
+  app.use(express.errorHandler({dumpExceptions: true, showStack: true}));
 }
 
 app.get('/', function (req, res) {
