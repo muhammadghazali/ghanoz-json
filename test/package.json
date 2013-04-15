@@ -1,0 +1,17 @@
+{
+  "name": "ghanoz-json-test",
+  "version": "0.0.0",
+  "private": true,
+  "author": "Muhammad Ghazali <muhammadghazali2480@gmail.com>",
+  "description": "ghanoz-json test suites",
+  "scripts": {
+    "test": "make test"
+  },
+  "dependencies": {
+    "frisby": "0.6.x",
+    "jasmine-node": "1.6.x"
+  },
+  "analyze": true,
+  "license": "MIT",
+  "engines": "0.8.x"
+}
