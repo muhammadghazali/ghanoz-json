@@ -1,5 +1,5 @@
 {
-  "name": "application-name",
+  "name": "ghanoz-json",
   "version": "0.0.1",
   "dependencies": {
     "express": {
@@ -77,22 +77,6 @@
         "debug": {
           "version": "0.7.2",
           "from": "debug@*"
-        }
-      }
-    },
-    "jade": {
-      "version": "0.28.2",
-      "from": "jade@*",
-      "resolved": "https://registry.npmjs.org/jade/-/jade-0.28.2.tgz",
-      "dependencies": {
-        "commander": {
-          "version": "0.6.1",
-          "from": "commander@0.6.1",
-          "resolved": "https://registry.npmjs.org/commander/-/commander-0.6.1.tgz"
-        },
-        "mkdirp": {
-          "version": "0.3.5",
-          "from": "mkdirp@0.3.x"
         }
       }
     }
