@@ -2,6 +2,10 @@ language: node_js
 node_js:
   - "0.8"
 
+env:
+  global:
+    - NODE_EN=testing
+
 services: mongodb
 
 before_script:
