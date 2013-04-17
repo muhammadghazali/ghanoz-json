@@ -1,4 +1,3 @@
-test:
-	cd test
-	npm install
-	npm test
+run-test:
+	export NODE_ENV=testing
+	cd test/; npm install; npm test
