@@ -18,5 +18,4 @@ before_script:
 
 script:
   - cd $TRAVIS_BUILD_DIR
-  - cd test
-  - npm test
+  - make test
