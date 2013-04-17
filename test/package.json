@@ -5,7 +5,7 @@
   "author": "Muhammad Ghazali <muhammadghazali2480@gmail.com>",
   "description": "ghanoz-json test suites",
   "scripts": {
-    "test": "make test"
+    "test": "node_modules/jasmine-node/bin/jasmine-node --forceexit api-end-point-test/"
   },
   "dependencies": {
     "frisby": "0.6.x",
