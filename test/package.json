@@ -5,11 +5,12 @@
   "author": "Muhammad Ghazali <muhammadghazali2480@gmail.com>",
   "description": "ghanoz-json test suites",
   "scripts": {
-    "test": "node_modules/jasmine-node/bin/jasmine-node --forceexit api-end-point-test/"
+    "test": "node_modules/vows/bin/vows api-end-point-test/*-spec.js"
   },
   "dependencies": {
-    "frisby": "0.6.x",
-    "jasmine-node": "1.6.x"
+    "vows": "0.6.x",
+    "xml2js": "0.2.x",
+    "request": "2.11.x"
   },
   "analyze": true,
   "license": "MIT",
