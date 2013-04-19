@@ -10,7 +10,6 @@ services: mongodb
 
 before_install:
   - cd $TRAVIS_BUILD_DIR
-  - cd src/app
   - npm install
 
 script:
