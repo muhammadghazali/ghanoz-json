@@ -13,9 +13,6 @@ before_install:
   - cd src/app
   - npm install
 
-before_script:
-  - mongo ghanoz_json_test --eval 'db.addUser("travis", "test");'
-
 script:
   - cd $TRAVIS_BUILD_DIR
   - make test

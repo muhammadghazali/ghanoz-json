@@ -26,7 +26,7 @@ require('./start-app');
   'When the client request the Event Details in JSON': {
     topic: function () {
       request({
-        uri: 'http://localhost:3000/event/511206849146c42125000001',
+        uri: 'http://localhost:3000/event/1',
         headers: {
           'Accept': 'application/json'
         },
@@ -71,7 +71,7 @@ vows.describe('Scenario 2: Event Details request should return response in XML')
   'When the client request the Event Details in XML': {
     topic: function () {
       request({
-        uri: 'http://localhost:3000/event/511206849146c42125000001',
+        uri: 'http://localhost:3000/event/1',
         headers: {
           'Accept': 'application/xml'
         },
@@ -87,7 +87,7 @@ vows.describe('Scenario 2: Event Details request should return response in XML')
   'And returned response is supplied with the Event Details resource URL': {
     topic: function () {
       request({
-        uri: 'http://localhost:3000/event/511206849146c42125000001',
+        uri: 'http://localhost:3000/event/1',
         headers: {
           'Accept': 'application/xml'
         },
@@ -119,7 +119,7 @@ vows.describe('Scenario 3: Unsupported Content-Type should return HTTP 406 code'
   'When the client request the resource with Content-Type other than JSON or XML': {
     topic: function () {
       request({
-        uri: 'http://localhost:3000/event/511206849146c42125000001',
+        uri: 'http://localhost:3000/event/1',
         headers: {
           'Accept': 'application/xxx'
         },
