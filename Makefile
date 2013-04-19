@@ -1,6 +1,6 @@
 test:
 	export NODE_ENV=testing
-	cd src/app/; sudo npm install
-	cd test/; sudo npm install; npm test
+	cd src/app/; npm install
+	cd test/; npm install; npm test
 
 .PHONY: test

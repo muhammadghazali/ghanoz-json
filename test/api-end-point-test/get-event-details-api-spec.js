@@ -12,7 +12,7 @@ var parser = new Parser({explicitArray: false});
 var parseString = parser.parseString;
 
 require('./start-app');
-var parser =
+
   /**
    * Scenario 1: Event Details request should return response in JSON
    * Given Event Details resource is accessible
