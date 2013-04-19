@@ -13,7 +13,7 @@ var app = module.exports = express();
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.use(function (req, res, next) {
-  MongoClient.connect('mongodb://localhost:27017/ghanoz_json',
+  MongoClient.connect('mongodb://localhost:27017/ghanoz_json_test',
     function (err, db) {
       if (!err) {
         req.mongodb = db;
