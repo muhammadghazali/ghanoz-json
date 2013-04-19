@@ -5,12 +5,22 @@
 var
   express = require('express'),
   http = require('http'),
-  path = require('path');
+  path = require('path'),
+  MongoClient = require('mongodb').MongoClient;
 
 var app = module.exports = express();
 
 // all environments
 app.set('port', process.env.PORT || 3000);
+app.use(function (req, res, next) {
+  MongoClient.connect('mongodb://localhost:27017/ghanoz_json',
+    function (err, db) {
+      if (!err) {
+        req.mongodb = db;
+        next();
+      }
+    });
+});
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
