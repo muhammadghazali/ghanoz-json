@@ -1,7 +1,5 @@
 
-/**
- * Eksternal modules
- */
+// external modules
 var
   express = require('express'),
   http = require('http'),
@@ -12,6 +10,7 @@ var app = module.exports = express();
 
 // all environments
 app.set('port', process.env.PORT || 3000);
+// TODO create this middleware as a new node module
 app.use(function (req, res, next) {
   MongoClient.connect('mongodb://localhost:27017/ghanoz_json_test',
     function (err, db) {
