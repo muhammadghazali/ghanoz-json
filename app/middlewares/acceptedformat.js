@@ -6,10 +6,10 @@ module.exports.acceptedFormat = function () {
   return function (req, res, next) {
 
     res.format({
-      'application/xml': function () {
+      'application/json': function () {
         next();
       },
-      'application/json': function () {
+      'application/xml': function () {
         next();
       },
       'default': function () {
