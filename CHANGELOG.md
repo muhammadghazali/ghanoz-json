@@ -1,4 +1,14 @@
 
+0.2.0 / 2013-04-23 
+==================
+
+  * Write get Event Details API
+  * Write a middlewares to expose MongoDB connection
+  * Write a middlewares to custom the response output 
+  * Write a middlewares to check the request content type
+  * Restructure repository directory layout
+  * Other small enhancements
+
 0.1.0 / 2013-04-18
 ==================
 
