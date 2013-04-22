@@ -19,6 +19,7 @@ app.use(express.bodyParser());
 app.use(express.methodOverride());
 // custom middlewares
 app.use(middlewares.acceptedFormat());
+app.use(middlewares.output());
 app.use(middlewares.mongoConnection());
 app.use(app.router);
 

@@ -3,12 +3,5 @@
  */
 
 exports.index = function (req, res) {
-  res.format({
-    'application/json': function () {
-      res.send({message: 'ghanozjson Web API!'});
-    },
-    'default': function () {
-      res.send({message: 'ghanozjson Web API!'});
-    }
-  });
+  req.output(res, 200, {message: 'ghanozjson Web API!'});
 };
