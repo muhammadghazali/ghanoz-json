@@ -5,7 +5,7 @@ doc/
 test/
 
 # ignore database dir
-database/
+dump/
 
 # ignore NetBeans project dir
 nbproject/
