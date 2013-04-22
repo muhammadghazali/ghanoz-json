@@ -1,7 +1,7 @@
 /**
  * A middleware to check the requested content type.
  */
-module.exports.acceptedContentType = function () {
+module.exports.acceptedFormat = function () {
 
   return function (req, res, next) {
 

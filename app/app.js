@@ -13,22 +13,13 @@ var app = module.exports = express();
 
 // all environments
 app.set('port', process.env.PORT || 3000);
-// TODO create this middleware as a new node module
-app.use(function (req, res, next) {
-  MongoClient.connect('mongodb://localhost:27017/ghanoz_json_test',
-    function (err, db) {
-      if (!err) {
-        req.mongodb = db;
-        next();
-      }
-    });
-});
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 // custom middlewares
-app.use(middlewares.acceptedContentType());
+app.use(middlewares.acceptedFormat());
+app.use(middlewares.mongoConnection());
 app.use(app.router);
 
 // development only
