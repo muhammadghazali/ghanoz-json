@@ -6,6 +6,9 @@ var
   path = require('path'),
   MongoClient = require('mongodb').MongoClient;
 
+// internal modules
+var middlewares = require('./middlewares');
+
 var app = module.exports = express();
 
 // all environments
@@ -24,6 +27,8 @@ app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
+// custom middlewares
+app.use(middlewares.acceptedContentType());
 app.use(app.router);
 
 // development only
@@ -41,19 +46,7 @@ if ('testing' == app.get('env')) {
   app.use(express.errorHandler({dumpExceptions: true, showStack: true}));
 }
 
-/**
- *
- */
-function checkRequestedContentType (req, res, next) {
-  if (req.accepts('application/json') || req.accepts('application/xml'))
-    next();
-  else
-    res.send(406, 'Sorry, we only provide resources in JSON and XML.');
-}
-
 var routes = require('./routes');
-
-app.all('*', checkRequestedContentType);
 
 app.get('/', routes.main.index);
 

@@ -18,7 +18,7 @@ exports.details = function (req, res) {
     if (err) {
       res.format({
         'application/json': function () {
-          res.json(500, err.toString());
+          res.json(500, {messge: err.toString()});
         },
         'application/xml': function () {
           // TODO it should be send an error in xml string
@@ -28,11 +28,11 @@ exports.details = function (req, res) {
     } else if (doc === null) {
       res.format({
         'application/json': function () {
-          res.json(400, err.toString());
+          res.json(404, {message: 'Requested resource could not be found'});
         },
         'application/xml': function () {
           // TODO it should be send an error in xml string
-          res.send(400, err.toString());
+          res.send(404, 'Requested resource could not be found');
         }
       });
 
