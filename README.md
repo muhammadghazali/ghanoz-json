@@ -17,7 +17,7 @@ Test suites is located under `test` directory. Execute the following command to
 run the test:
 
 ```sh
-make test
+sudo make test
 ```
 
 ## License
