@@ -1,11 +1,12 @@
 {
   "name": "ghanoz-json",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "author": "Muhammad Ghazali <muhammadghazali2480@gmail.com>",
   "description": "POC: JSON is more efficient than XML when use it in Web service resource representation",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app/app.js",
+    "test": "node_modules/vows/bin/vows test/api-end-point-test/*-spec.js"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,14 @@
     "xml"
   ],
   "dependencies": {
-    "express": "3.1.2"
+    "express": "3.1.x",
+    "easyxml": "0.0.x",
+    "mongodb": "1.2.x"
+  },
+  "devDependencies": {
+    "vows": "0.6.x",
+    "xml2js": "0.2.x",
+    "request": "2.11.x"
   },
   "analyze": true,
   "license": "MIT",

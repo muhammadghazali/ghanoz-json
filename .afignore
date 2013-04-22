@@ -1,0 +1,14 @@
+# ignore doc dir
+doc/
+
+# ignore test dir
+test/
+
+# ignore database dir
+dump/
+
+# ignore NetBeans project dir
+nbproject/
+
+# ignore Makefile
+Makefile
