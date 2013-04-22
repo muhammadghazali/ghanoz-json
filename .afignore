@@ -9,3 +9,6 @@ dump/
 
 # ignore NetBeans project dir
 nbproject/
+
+# ignore Makefile
+Makefile
