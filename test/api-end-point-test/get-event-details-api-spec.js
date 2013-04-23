@@ -48,10 +48,7 @@ require('./start-app');
         assert.isString(body);
         var result = JSON.parse(body);
         assert.isObject(result);
-
-        var data = result.data;
-        for (var key in data)
-          assert.include(data, key);
+        assert.include(result, 'url');
       }
   }
 })
