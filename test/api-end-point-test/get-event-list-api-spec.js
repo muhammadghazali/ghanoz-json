@@ -38,27 +38,17 @@ vows.describe('Scenario 1: Event List request should return response in JSON')
       function (err, res, body) {
         assert.isNull(err);
         assert.equal(res.headers['content-type'], 'application/json');
-        assert.isString(body);
-        var result = JSON.parse(body);
-        assert.isObject(result);
-        var expectedFields = ['url', 'page', 'pageSize', 'total', 'data'];
-        for (var i = 0; i < result.data.length; i++) {
-          var doc = result.data[1];
 
-          for (var j = 0; j < expectedFields.length; j++)
-            assert.include(doc, expectedFields[i]);
-        }
+        var result = JSON.parse(body);
+        assert.include(result, 'data');
+        assert.isObject(result);
+        assert.strictEqual(result.data.length <= 15, true);
       },
     'returned response is supplied with the Event List resource URL':
       function (err, res, body) {
         assert.isNull(err);
-        assert.isString(body);
         var result = JSON.parse(body);
-        assert.isObject(result);
-
-        var data = result.data;
-        for (var key in data)
-          assert.include(data, key);
+        assert.include(result, 'url');
       }
   }
 })
@@ -108,14 +98,6 @@ vows.describe('Scenario 2: Event List request should return response in XML')
       'should contained resource URL': function (err, result) {
         assert.isNull(err);
         assert.isObject(result);
-
-        var expectedFields = ['url', 'page', 'pageSize', 'total', 'data'];
-        for (var i = 0; i < result.data.length; i++) {
-          var doc = result.data[1];
-
-          for (var j = 0; j < expectedFields.length; j++)
-            assert.include(doc, expectedFields[i]);
-        }
       }
     }
   }

@@ -3,6 +3,7 @@
  */
 
 var easyXML = require('easyxml');
+
 exports.details = function (req, res) {
 
   var eventID = parseInt(req.params.id, 10);
@@ -14,8 +15,27 @@ exports.details = function (req, res) {
       req.output(res, 404, {message: 'Requested resource could not be found'});
     } else if (doc) {
       var responseData = {
-        url: "http://localhost:3000/event" + eventID,
+        url: 'http://localhost:3000/event' + eventID,
         data: doc
+      };
+
+      req.output(res, 200, responseData);
+    }
+  });
+};
+
+exports.list = function (req, res) {
+
+  var collection = req.mongodb.collection('events');
+  collection.find({}, {limit: 15}).toArray(function (err, docs) {
+    if (err) {
+      req.output(res, 500, {message: err.toString()});
+    } else if (docs.length === 0) {
+      req.output(res, 404, {message: 'Requested resource could not be found'});
+    } else if (docs.length > 0) {
+      var responseData = {
+        url: 'http://localhost:3000/events',
+        data: docs
       };
 
       req.output(res, 200, responseData);
