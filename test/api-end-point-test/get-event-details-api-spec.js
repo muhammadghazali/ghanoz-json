@@ -98,7 +98,7 @@ vows.describe('Scenario 2: Event Details request should return response in XML')
       'should contained resource URL': function (err, result) {
         assert.isNull(err);
         assert.include(result.response, 'url');
-        assert.include(result.response, 'data');
+        assert.include(result.response, 'events');
       }
     }
   }
