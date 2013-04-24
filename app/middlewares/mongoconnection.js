@@ -13,7 +13,7 @@ var openedDb = null;
 function connect (cb) {
   MongoClient.connect(mongoUtils.mongoURL, {
     auto_reconnect: true,
-    poolSize: 5
+    poolSize: 100
   }, function (err, db) {
     if (err)
       cb(err);
