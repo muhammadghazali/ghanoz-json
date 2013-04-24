@@ -14,7 +14,7 @@ var app = module.exports = express();
 // all environments
 app.set('port', process.env.PORT || 3000);
 app.use(express.favicon());
-app.use(express.logger('dev'));
+app.use(express.logger());
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 // custom middlewares
@@ -25,6 +25,7 @@ app.use(app.router);
 
 // development only
 if ('development' == app.get('env')) {
+  app.use(express.logger('dev'));
   app.use(express.errorHandler({dumpExceptions: true, showStack: true}));
 }
 
@@ -35,6 +36,7 @@ if ('production' == app.get('env')) {
 
 // testing only
 if ('testing' == app.get('env')) {
+  app.use(express.logger('dev'));
   app.use(express.errorHandler({dumpExceptions: true, showStack: true}));
 }
 
@@ -45,6 +47,10 @@ app.get('/', routes.main.index);
 app.get('/event/:id', routes.event.details);
 
 app.get('/events', routes.event.list);
+
+app.get('/loaderio-99080ddebf0052dfdbe912e4352c0ce8', function (req, res) {
+  res.send('loaderio-99080ddebf0052dfdbe912e4352c0ce8');
+});
 
 app.listen(process.env.VCAP_APP_PORT || app.get('port'), function () {
   console.log('Express server listening on port ' + app.get('port'));
