@@ -11,11 +11,7 @@ function resourceBuilder (res, code, resource) {
       res.json(code, resource);
     },
     'application/xml': function () {
-      var rebuildResponseData = {
-        url: resource.url,
-        events: resource.data
-      };
-      res.send(code, easyxml.render(rebuildResponseData));
+      res.send(code, easyxml.render(resource));
     }
   });
 }
