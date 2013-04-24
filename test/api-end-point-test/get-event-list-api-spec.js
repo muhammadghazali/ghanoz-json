@@ -99,7 +99,7 @@ vows.describe('Scenario 2: Event List request should return response in XML')
         function (err, result) {
           assert.isNull(err);
           assert.include(result.response, 'url');
-          assert.include(result.response, 'events');
+          assert.include(result.response, 'data');
         }
     }
   }
