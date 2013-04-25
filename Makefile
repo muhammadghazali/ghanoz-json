@@ -1,3 +1,8 @@
+run-local:
+	mongo ghanozjson --eval "db.dropDatabase()"
+	mongoimport --jsonArray --host localhost --db ghanozjson --collection events --file test/db/events.json
+	NODE_ENV=development npm start
+
 test:
 	npm install
 	npm install -d

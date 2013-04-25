@@ -3,5 +3,10 @@
  */
 
 exports.index = function (req, res) {
-  req.output(res, 200, {message: 'ghanozjson Web API!'});
+  var responseData = {
+    url: 'http://ghanozjson.ap01.aws.af.cm/',
+    data: {message: 'ghanozjson Web API!'}
+  };
+
+  req.output(res, 200, responseData);
 };

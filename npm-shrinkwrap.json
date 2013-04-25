@@ -1,6 +1,6 @@
 {
   "name": "ghanoz-json",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "dependencies": {
     "express": {
       "version": "3.1.2",
@@ -112,6 +112,11 @@
           "resolved": "https://registry.npmjs.org/bson/-/bson-0.1.8.tgz"
         }
       }
+    },
+    "pretty-data": {
+      "version": "0.40.0",
+      "from": "pretty-data@",
+      "resolved": "https://registry.npmjs.org/pretty-data/-/pretty-data-0.40.0.tgz"
     },
     "xml2js": {
       "version": "0.2.6",

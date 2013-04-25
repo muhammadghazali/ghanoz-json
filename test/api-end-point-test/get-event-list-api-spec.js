@@ -60,7 +60,7 @@ vows.describe('Scenario 1: Event List request should return response in JSON')
  * And Event List resource is accessible
  * When the client request the Event List in XML
  * Then the Web API should return Event List in XML
- * And returned response is should be accompanied by properties like resource url, page, pages, pageSize, total
+ * And returned response is should be accompanied by resource url
  * And the maximum of number of item on the Event List is 15 Event
  */
 vows.describe('Scenario 2: Event List request should return response in XML')
@@ -95,10 +95,12 @@ vows.describe('Scenario 2: Event List request should return response in XML')
       topic: function (res, body) {
         parseString(body, this.callback);
       },
-      'should contained resource URL': function (err, result) {
-        assert.isNull(err);
-        assert.isObject(result);
-      }
+      'And returned response is should be accompanied by resource url':
+        function (err, result) {
+          assert.isNull(err);
+          assert.include(result.response, 'url');
+          assert.include(result.response, 'data');
+        }
     }
   }
 })
