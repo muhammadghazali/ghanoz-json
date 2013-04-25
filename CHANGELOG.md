@@ -1,4 +1,13 @@
 
+0.3.1 / 2013-04-25 
+==================
+
+  * Stabilize the MongoDB connection middleware.
+  * Minified the XML resource output when run in production mode
+  * Listen to process.env.VCAP_APP_PORT
+  * Make sure the XML resource structure are cool enough
+  * Make sure the url field is exists in resource representation
+
 0.3.0 / 2013-04-23 
 ==================
 
