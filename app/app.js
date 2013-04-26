@@ -3,8 +3,7 @@
 var
   express = require('express'),
   http = require('http'),
-  path = require('path'),
-  MongoClient = require('mongodb').MongoClient;
+  path = require('path');
 
 // internal modules
 var middlewares = require('./middlewares');
