@@ -1,4 +1,13 @@
 
+0.3.2 / 2013-04-27 
+==================
+
+  * Write helper function to get the API base path
+  * Enhance source code documentations
+  * Removed dead codes
+  * Rename middleware and extract configs loading
+  * Extract a function to select MongoDB collection
+
 0.3.1 / 2013-04-25 
 ==================
 
