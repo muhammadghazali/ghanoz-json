@@ -37,7 +37,7 @@ exports.details = function (req, res) {
       req.output(res, 404, {message: 'Requested resource could not be found'});
     } else if (doc) {
       var responseData = {
-        url: 'http://localhost:3000/event' + eventID,
+        url: getBasePath() + '/event' + eventID,
         data: doc
       };
 
@@ -56,7 +56,7 @@ exports.list = function (req, res) {
       req.output(res, 404, {message: 'Requested resource could not be found'});
     } else if (docs.length > 0) {
       var responseData = {
-        url: 'http://localhost:3000/events',
+        url: getBasePath() + '/events',
         data: docs
       };
 
