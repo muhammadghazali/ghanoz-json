@@ -5,8 +5,7 @@ function generateMongoURL() {
 
   credentials = require('./../../configs/dbcredentials');
 
-  credentials.hostname = (credentials.hostname ||
-    'localhost');
+  credentials.hostname = (credentials.hostname || 'localhost');
   credentials.port = (credentials.port || 27017);
   credentials.db = (credentials.db || 'test');
 

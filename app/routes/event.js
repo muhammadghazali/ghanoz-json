@@ -18,6 +18,13 @@ function selectCollection (db) {
   event = db.collection(EVENT_COLLECTION);
 }
 
+// get API base path based on the running mode
+function getBasePath () {
+
+  return (process.env.NODE_ENV === 'production') ?
+    'http://ghanozjson.ap01.aws.af.cm' : 'http://localhost:3000';
+}
+
 exports.details = function (req, res) {
 
   var eventID = parseInt(req.params.id, 10);
