@@ -9,6 +9,8 @@ var openedDb = null;
 
 /**
  * Connect to MongoDB
+ *
+ * @param {Function} cb callback function
  */
 function connect (cb) {
   MongoClient.connect(mongoUtils.mongoURL, {
