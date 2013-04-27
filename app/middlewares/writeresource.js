@@ -7,6 +7,11 @@ var
   easyxml = require('easyxml'),
   prettyData = require('pretty-data').pd;
 
+/**
+ * @param {Object} res HTTP response object
+ * @param {Number} code HTTP status code
+ * @param {Object} resource resource to be build
+ */
 function resourceBuilder (res, code, resource) {
   res.format({
     'application/json': function () {
@@ -21,6 +26,7 @@ function resourceBuilder (res, code, resource) {
   });
 }
 
+// Write the resource and attach it to HTTP request object
 module.exports.writeResource = function () {
 
   return function (req, res, next) {
