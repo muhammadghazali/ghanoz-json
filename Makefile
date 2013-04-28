@@ -1,16 +1,16 @@
 benchmark-normal:
 	mongo ghanozjson_test --eval "db.dropDatabase()"
 	mongoimport --jsonArray --host localhost --db ghanozjson_test --collection events --file test/db/normal-events-resource.json
-	ab -c 100 -t 180 -H "Accept: application/json" -g benchmark/json.dat http://localhost:3000/events
-	ab -c 100 -t 180 -H "Accept: application/xml" -g benchmark/xml.dat http://localhost:3000/events
+	ab -c 1 -t 90 -H "Accept: application/json" -g benchmark/json.dat http://localhost:3000/events
+	ab -c 1 -t 90 -H "Accept: application/xml" -g benchmark/xml.dat http://localhost:3000/events
 	gnuplot benchmark/ghanoz-json-benchmark-normal.p
 	mv ghanoz-json-benchmark* benchmark
 
 benchmark-empty:
 	mongo ghanozjson_test --eval "db.dropDatabase()"
 	mongoimport --jsonArray --host localhost --db ghanozjson_test --collection events --file test/db/empty-events-resource.json
-	ab -c 100 -t 180 -H "Accept: application/json" -g benchmark/json.dat http://localhost:3000/events
-	ab -c 100 -t 180 -H "Accept: application/xml" -g benchmark/xml.dat http://localhost:3000/events
+	ab -c 1 -t 90 -H "Accept: application/json" -g benchmark/json.dat http://localhost:3000/events
+	ab -c 1 -t 90 -H "Accept: application/xml" -g benchmark/xml.dat http://localhost:3000/events
 	gnuplot benchmark/ghanoz-json-benchmark-empty.p
 	mv ghanoz-json-benchmark* benchmark
 
