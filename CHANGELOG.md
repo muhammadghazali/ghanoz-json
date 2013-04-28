@@ -1,4 +1,10 @@
 
+0.3.3 / 2013-04-28 
+==================
+
+  * Add benchmark: Load testing Web API in Normal Resource scenario #5219951777808 #5219951777810
+  * Add benchmark: Load testing Web API in Empty Schema scenario #5219951777799 #5219951777801
+
 0.3.2 / 2013-04-27 
 ==================
 
