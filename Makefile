@@ -1,5 +1,5 @@
 benchmark-normal:
-	mongo ghanozjson --eval "db.dropDatabase()"
+	mongo ghanozjson_test --eval "db.dropDatabase()"
 	mongoimport --jsonArray --host localhost --db ghanozjson_test --collection events --file test/db/normal-events-resource.json
 	ab -c 100 -t 180 -H "Accept: application/json" -g benchmark/json.dat http://localhost:3000/events
 	ab -c 100 -t 180 -H "Accept: application/xml" -g benchmark/xml.dat http://localhost:3000/events
@@ -7,8 +7,8 @@ benchmark-normal:
 	mv ghanoz-json-benchmark* benchmark
 
 benchmark-empty:
-	mongo ghanozjson --eval "db.dropDatabase()"
-	mongoimport --jsonArray --host localhost --db ghanozjson_test --collection events --file test/db/empty-events-schema.json
+	mongo ghanozjson_test --eval "db.dropDatabase()"
+	mongoimport --jsonArray --host localhost --db ghanozjson_test --collection events --file test/db/empty-events-resource.json
 	ab -c 100 -t 180 -H "Accept: application/json" -g benchmark/json.dat http://localhost:3000/events
 	ab -c 100 -t 180 -H "Accept: application/xml" -g benchmark/xml.dat http://localhost:3000/events
 	gnuplot benchmark/ghanoz-json-benchmark-empty.p

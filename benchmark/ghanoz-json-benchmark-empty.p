@@ -5,7 +5,7 @@ set terminal canvas
 set output 'ghanoz-json-benchmark-empty.html'
 
 # The graph title
-set title "ghanoz-json xml/json benchmark testing for Empty Schema scenario"
+set title "ghanoz-json xml/json benchmark testing for Empty Events Resource scenario"
 
 # nicer aspect ratio for image size
 set size 1,0.7

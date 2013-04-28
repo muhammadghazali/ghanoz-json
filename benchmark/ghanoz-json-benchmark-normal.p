@@ -5,7 +5,7 @@ set terminal canvas
 set output 'ghanoz-json-benchmark-normal.html'
 
 # The graph title
-set title "ghanoz-json xml/json benchmark testing for Normal Resource scenario"
+set title "ghanoz-json xml/json benchmark testing for Normal Events Resource scenario"
 
 # nicer aspect ratio for image size
 set size 1,0.7
