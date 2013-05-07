@@ -1,4 +1,11 @@
 
+0.3.4 / 2013-05-07 
+==================
+
+  * Add command to run benchmark with just one request
+  * Ignored benchmark dir when deploy to AppFog
+  * Narrowed the benchmark scenario
+
 0.3.3 / 2013-04-28 
 ==================
 
