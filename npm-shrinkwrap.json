@@ -1,6 +1,6 @@
 {
   "name": "ghanoz-json",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "dependencies": {
     "express": {
       "version": "3.1.2",
@@ -118,6 +118,16 @@
       "from": "pretty-data@",
       "resolved": "https://registry.npmjs.org/pretty-data/-/pretty-data-0.40.0.tgz"
     },
+    "xml2js": {
+      "version": "0.2.6",
+      "from": "xml2js@0.2.x",
+      "dependencies": {
+        "sax": {
+          "version": "0.4.2",
+          "from": "sax@0.4.2"
+        }
+      }
+    },
     "vows": {
       "version": "0.6.4",
       "from": "vows@0.6.x",
@@ -129,16 +139,6 @@
         "diff": {
           "version": "1.0.4",
           "from": "diff@~1.0.3"
-        }
-      }
-    },
-    "xml2js": {
-      "version": "0.2.6",
-      "from": "xml2js@0.2.x",
-      "dependencies": {
-        "sax": {
-          "version": "0.4.2",
-          "from": "sax@0.4.2"
         }
       }
     },
