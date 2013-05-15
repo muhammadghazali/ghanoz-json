@@ -1,3 +1,16 @@
+.PHONY: help test benchmark-empty benchmark-normal benchmark-one run-test run-dev run-prod
+
+help:
+	@echo "Please use \`make <target>' where <target> is one of"
+	@echo "  run-prod            Run Web API server in production mode"
+	@echo "  run-test            Run Web API server in testing mode"
+	@echo "  run-dev             Run Web API server in development mode"
+	@echo "  benchmark-empty     Load testing Web API in Empty Resource scenario"
+	@echo "  benchmark-normal    Load testing Web API in Normal Resource scenario"
+	@echo "  benchmark-one       Load testing Web API in Normal Resource scenario"
+	@echo "  test                Run the test againts  Web API server"
+
+
 benchmark-normal:
 	mongo ghanozjson_test --eval "db.dropDatabase()"
 	mongoimport --jsonArray --host localhost --db ghanozjson_test --collection events --file test/db/normal-events-resource.json
@@ -41,5 +54,3 @@ test:
 	NODE_ENV=testing npm test
 	mongodump --db ghanozjson_test
 	mongo ghanozjson_test --eval "db.dropDatabase()"
-
-.PHONY: test benchmark-empty benchmark-normal benchmark-one run-test run-dev run-prod

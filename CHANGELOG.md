@@ -1,18 +1,24 @@
 
-0.3.4 / 2013-05-07 
+0.3.5 / 2013-05-15
+==================
+
+  * Update dependencies and use Gemnasium to monitor new dependencies releases
+  * Add help command
+
+0.3.4 / 2013-05-07
 ==================
 
   * Add command to run benchmark with just one request
   * Ignored benchmark dir when deploy to AppFog
   * Narrowed the benchmark scenario
 
-0.3.3 / 2013-04-28 
+0.3.3 / 2013-04-28
 ==================
 
   * Add benchmark: Load testing Web API in Normal Resource scenario #5219951777808 #5219951777810
   * Add benchmark: Load testing Web API in Empty Schema scenario #5219951777799 #5219951777801
 
-0.3.2 / 2013-04-27 
+0.3.2 / 2013-04-27
 ==================
 
   * Write helper function to get the API base path
@@ -21,7 +27,7 @@
   * Rename middleware and extract configs loading
   * Extract a function to select MongoDB collection
 
-0.3.1 / 2013-04-25 
+0.3.1 / 2013-04-25
 ==================
 
   * Stabilize the MongoDB connection middleware.
@@ -30,18 +36,18 @@
   * Make sure the XML resource structure are cool enough
   * Make sure the url field is exists in resource representation
 
-0.3.0 / 2013-04-23 
+0.3.0 / 2013-04-23
 ==================
 
   * Write get Event List API #5039891759727 #5039891759729
   * Add getting started steps
 
-0.2.0 / 2013-04-23 
+0.2.0 / 2013-04-23
 ==================
 
   * Write get Event Details API
   * Write a middlewares to expose MongoDB connection
-  * Write a middlewares to custom the response output 
+  * Write a middlewares to custom the response output
   * Write a middlewares to check the request content type
   * Restructure repository directory layout
   * Other small enhancements
