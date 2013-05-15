@@ -1,5 +1,10 @@
+
+ghanoz-json
+===========
+
+## Overview
+
 POC: JSON is more efficient than XML in Web API resource representation
-=======================================================================
 
 ## Build Status
 
@@ -10,6 +15,10 @@ Master:
 Development:
 
 [![Build Status](https://travis-ci.org/muhammadghazali/ghanoz-json.png?branch=development)](https://travis-ci.org/muhammadghazali/ghanoz-json)
+
+## Dependencies Status
+
+[![Dependency Status](https://gemnasium.com/muhammadghazali/ghanoz-json.png)](https://gemnasium.com/muhammadghazali/ghanoz-json)
 
 ## Getting Started
 
