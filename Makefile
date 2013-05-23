@@ -14,16 +14,16 @@ help:
 benchmark-normal:
 	mongo ghanozjson_test --eval "db.dropDatabase()"
 	mongoimport --jsonArray --host localhost --db ghanozjson_test --collection events --file test/db/normal-events-resource.json
-	ab -c 1 -t 90 -H "Accept: application/json" -g benchmark/json.dat http://localhost:3000/events
-	ab -c 1 -t 90 -H "Accept: application/xml" -g benchmark/xml.dat http://localhost:3000/events
+	ab -c 1 -t 90 -H "Accept: application/json" -g benchmark/benchmark-normal-json.dat http://localhost:3000/events
+	ab -c 1 -t 90 -H "Accept: application/xml" -g benchmark/benchmark-normal-xml.dat http://localhost:3000/events
 	gnuplot benchmark/ghanoz-json-benchmark-normal.p
 	mv ghanoz-json-benchmark* benchmark
 
 benchmark-empty:
 	mongo ghanozjson_test --eval "db.dropDatabase()"
 	mongoimport --jsonArray --host localhost --db ghanozjson_test --collection events --file test/db/empty-events-resource.json
-	ab -c 1 -t 90 -H "Accept: application/json" -g benchmark/json.dat http://localhost:3000/events
-	ab -c 1 -t 90 -H "Accept: application/xml" -g benchmark/xml.dat http://localhost:3000/events
+	ab -c 1 -t 90 -H "Accept: application/json" -g benchmark/benchmark-empty-json.dat http://localhost:3000/events
+	ab -c 1 -t 90 -H "Accept: application/xml" -g benchmark/benchmark-empty-xml.dat http://localhost:3000/events
 	gnuplot benchmark/ghanoz-json-benchmark-empty.p
 	mv ghanoz-json-benchmark* benchmark
 
@@ -43,7 +43,7 @@ run-dev:
 
 run-prod:
 	mongo ghanozjson --eval "db.dropDatabase()"
-	mongoimport --jsonArray --host localhost --db ghanozjson --collection eve$
+	mongoimport --jsonArray --host localhost --db ghanozjson --collection events --file test/db/events.json
 	NODE_ENV=production npm start
 
 test:
