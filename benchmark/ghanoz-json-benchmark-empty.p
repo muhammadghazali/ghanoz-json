@@ -21,5 +21,5 @@ set ylabel "response time (ms)"
 
 # plot data from "out.dat" using column 9 with smooth sbezier lines
 # and title of "nodejs" for the given data
-plot "benchmark/json.dat" using 9 smooth sbezier with lines title "json", \
- "benchmark/xml.dat" using 9 smooth sbezier with lines title "xml"
+plot "benchmark/empty-json.dat" using 9 smooth sbezier with lines title "json", \
+ "benchmark/empty-xml.dat" using 9 smooth sbezier with lines title "xml"

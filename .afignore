@@ -14,4 +14,4 @@ nbproject/
 Makefile
 
 # ignore benchmark
-benchmark
+benchmark/
