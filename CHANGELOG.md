@@ -1,4 +1,12 @@
 
+0.3.6 / 2013-06-11 
+==================
+
+  * Fallback to default db credentials if failed to load the production db credentials
+  * Fix broken commands
+  * Ignore benchmark directory when deploying to AppFog
+  * Add dependencies status and overview
+
 0.3.5 / 2013-05-15
 ==================
 
