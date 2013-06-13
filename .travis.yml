@@ -8,13 +8,9 @@ env:
 
 services: mongodb
 
-before_install:
-  - cd $TRAVIS_BUILD_DIR
-  - npm install
-
 before_script:
   - cd $TRAVIS_BUILD_DIR
-  - npm install -d
+  - npm install
 
 script:
   - cd $TRAVIS_BUILD_DIR
