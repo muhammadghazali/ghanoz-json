@@ -10,5 +10,4 @@ services: mongodb
 
 script:
   - cd $TRAVIS_BUILD_DIR
-  - ls node_modules
   - make test
