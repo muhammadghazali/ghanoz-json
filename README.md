@@ -23,8 +23,8 @@ Development:
 ## Getting Started
 
 Prerequisites:
-* [Node.JS](https://github.com/joyent/node) version 0.8.x
-* [NPM](http://npmjs.org/) version 1.2.x
+* [Node.JS](https://github.com/joyent/node) version 0.10.x
+* [NPM](http://npmjs.org/) version 1.3.x
 
 To run the app, please run the following steps:
 
@@ -34,13 +34,15 @@ $ git clone git@github.com:muhammadghazali/ghanoz-json.git
 ```
 Step 2. Install the dependencies:
 
+I assume you already install the [npm](http://npmjs.org/).
+
 ```sh
-$ sudo npm install
+$ sudo make setup
 ```
 
 Step 3. Start the app:
 ```sh
-npm start
+$ npm start
 ```
 
 ## Test
@@ -49,7 +51,7 @@ Test suites is located under `test` directory. Execute the following command to
 run the test:
 
 ```sh
-sudo make test
+$ sudo make test
 ```
 
 ## License

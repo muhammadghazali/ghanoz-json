@@ -1,7 +1,8 @@
-.PHONY: help test benchmark-empty benchmark-normal benchmark-one run-test run-dev run-prod
+.PHONY: help test benchmark-empty benchmark-normal benchmark-one run-test run-dev run-prod setup
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
+	@echo "  setup               Setup required dependencies"
 	@echo "  run-prod            Run Web API server in production mode"
 	@echo "  run-test            Run Web API server in testing mode"
 	@echo "  run-dev             Run Web API server in development mode"
@@ -47,10 +48,11 @@ run-prod:
 	NODE_ENV=production npm start
 
 test:
-	npm install
-	npm install -d
 	mongo ghanozjson_test --eval "db.dropDatabase()"
 	mongoimport --jsonArray --host localhost --db ghanozjson_test --collection events --file test/db/events.json
 	NODE_ENV=testing npm test
 	mongodump --db ghanozjson_test
 	mongo ghanozjson_test --eval "db.dropDatabase()"
+
+setup:
+	npm install && npm install -d
