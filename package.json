@@ -1,6 +1,6 @@
 {
   "name": "ghanoz-json",
-  "version": "0.3.7",
+  "version": "0.3.8",
   "private": true,
   "author": "Muhammad Ghazali <muhammadghazali2480@gmail.com>",
   "description": "POC: JSON is more efficient than XML when use it in Web service resource representation",
@@ -18,7 +18,7 @@
     "xml"
   ],
   "dependencies": {
-    "express": "3.2.x",
+    "express": "3.3.x",
     "easyxml": "0.0.x",
     "mongodb": "1.3.x",
     "pretty-data": "0.40.x"
