@@ -1,4 +1,9 @@
 
+0.3.8 / 2013-07-05 
+==================
+
+  * Update dependencie8s and minor changes on the task runner
+
 0.3.7 / 2013-06-14 
 ==================
 
